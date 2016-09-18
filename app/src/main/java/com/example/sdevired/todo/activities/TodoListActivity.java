@@ -54,7 +54,7 @@ public class TodoListActivity extends AppCompatActivity implements EditItemDialo
         String newTask = etNewItem.getText().toString();
         //check if task is empty
         if(newTask == null || newTask.isEmpty()){
-            Toast.makeText(this, R.string.item_validation_alert, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.item_validation_alert, Toast.LENGTH_SHORT).show();
         }else {
             TodoItem entry = new TodoItem();
             entry.setTask(newTask);
@@ -66,7 +66,7 @@ public class TodoListActivity extends AppCompatActivity implements EditItemDialo
             //clear the text
             etNewItem.setText("");
             //show success message
-            Toast.makeText(this, R.string.item_validation_alert, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.item_added_success, Toast.LENGTH_SHORT).show();
         }
     }
 

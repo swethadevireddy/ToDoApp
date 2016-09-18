@@ -137,8 +137,7 @@ public class EditItemDialogFragment extends DialogFragment implements TextView.O
             dismiss();
         } else {
             //show alert if item is empty
-            Toast toast = Toast.makeText(this.getContext(),R.string.item_validation_alert, Toast.LENGTH_LONG);
-            toast.show();
+            Toast.makeText(this.getContext(),R.string.item_validation_alert, Toast.LENGTH_SHORT).show();
         }
     }
 
