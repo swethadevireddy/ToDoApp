@@ -76,14 +76,15 @@ public class TodoListDBHelper extends SQLiteOpenHelper {
     /*
      * Insert TodoItem to db.
      */
-    public void addTodo(TodoItem todo) {
+    public long addTodo(TodoItem todo) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COL_TASK, todo.getTask());
-        db.insert(TABLE_NAME,
+        long id = db.insert(TABLE_NAME,
                 null,
                 values);
         db.close();
+        return id;
     }
 
     /*

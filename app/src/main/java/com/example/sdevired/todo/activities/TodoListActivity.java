@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 import com.example.sdevired.todo.R;
 import com.example.sdevired.todo.adapters.TodoListAdapter;
-import com.example.sdevired.todo.db.model.TodoItem;
 import com.example.sdevired.todo.db.TodoListDBHelper;
+import com.example.sdevired.todo.db.model.TodoItem;
 import com.example.sdevired.todo.fragments.EditItemDialogFragment;
 
 import java.util.ArrayList;
@@ -58,10 +58,12 @@ public class TodoListActivity extends AppCompatActivity implements EditItemDialo
         }else {
             TodoItem entry = new TodoItem();
             entry.setTask(newTask);
-            mDbHelper.addTodo(entry);
+            long id  = mDbHelper.addTodo(entry);
+            entry.setId(id);
             items.add(entry);
             //sort by date
             Collections.sort(items);
+            itemsAdapter.setToDoEntryId(id);
             itemsAdapter.notifyDataSetChanged();
             //clear the text
             etNewItem.setText("");
@@ -79,6 +81,7 @@ public class TodoListActivity extends AppCompatActivity implements EditItemDialo
             public boolean onItemLongClick(AdapterView<?> adapterView, View item, int pos, long id){
                 mDbHelper.deleteTodo(items.get(pos));
                 items.remove(pos);
+                itemsAdapter.setToDoEntryId(-1);
                 itemsAdapter.notifyDataSetChanged();
                 //show success message
                 Toast.makeText(adapterView.getContext(), R.string.item_delete_success, Toast.LENGTH_SHORT).show();
