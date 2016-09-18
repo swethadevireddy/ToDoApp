@@ -4,7 +4,7 @@
 
 Submitted by: **Swetha Devireddy**
 
-Time spent: **40** hours spent in total
+Time spent: **25** hours spent in total
 
 ## User Stories
 
