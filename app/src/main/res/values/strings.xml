@@ -4,5 +4,14 @@
     <string name="edit_item">EditItem</string>
     <string name="add_hint">Enter a new item</string>
     <string name="save_label">Save</string>
-    <string name="edit_activity_label">Edit Item Below:</string>
+    <string name="edit_activity_label">Edit Item</string>
+    <string name="set_priority">Set Priority</string>
+    <string name="item_validation_alert">Enter Valid Todo Item</string>
+    <string name="item_delete_success">Todo Deleted Successfully</string>
+    <string name="item_added_success">Todo Added Successfully</string>
+     <string-array name="priority_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
 </resources>

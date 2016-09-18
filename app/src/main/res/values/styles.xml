@@ -6,6 +6,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:dialogTheme">@style/DialogTheme</item>
     </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowTitleStyle">@style/DialogTitleTheme</item>
+    </style>
+
+    <style name="DialogTitleTheme">
+        <item name="android:background">@color/lightblue </item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
 
 </resources>
