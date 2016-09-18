@@ -34,13 +34,16 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/urJUNLB.gif?1' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+* Faced issues in highlighting added item/edited.
+For this used id of to-do to identify the element changed/added.
+And also viewholder.getTag is giving issues(comments in TodoListAdapter),so had to create viewholder everytime
+* Had to get the id on add to-do call otherwise edits made for added to-do will be lost on app restart.
 
 ## License
 
